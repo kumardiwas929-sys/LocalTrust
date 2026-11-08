@@ -1,0 +1,21 @@
+{
+  "name": "localtrust-monorepo",
+  "version": "1.0.0",
+  "description": "LocalTrust - Full-Stack MERN Service Marketplace",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "seed": "npm --prefix server run seed:all"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
